@@ -1,0 +1,5 @@
+2026-04-02 17:18:48,389 - INFO - ===== CATEGORICAL TO NUMERICAL STARTED =====
+2026-04-02 17:18:48,389 - INFO - Before Train Shape: (5634, 16)
+2026-04-02 17:18:48,389 - INFO - Before Test Shape: (1409, 16)
+2026-04-02 17:18:48,390 - INFO - Categorical Columns: ['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod', 'sim']
+2026-04-02 17:18:48,390 - ERROR - Error in line 23 due to: OneHotEncoder.__init__() got an unexpected keyword argument 'sparse'

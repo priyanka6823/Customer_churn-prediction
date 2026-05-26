@@ -1,0 +1,278 @@
+2026-05-25 18:35:47,852 - INFO - Total data size: (7043, 22)
+2026-05-25 18:35:47,859 - INFO - Null values:
+customerID           0
+gender               0
+SeniorCitizen        0
+Partner              0
+Dependents           0
+tenure               0
+PhoneService         0
+MultipleLines        0
+InternetService      0
+OnlineSecurity       0
+OnlineBackup         0
+DeviceProtection     0
+TechSupport          0
+StreamingTV          0
+StreamingMovies      0
+Contract             0
+PaperlessBilling     0
+PaymentMethod        0
+MonthlyCharges       0
+TotalCharges        11
+Churn                0
+sim                  0
+dtype: int64
+2026-05-25 18:35:47,864 - INFO - Train data size: 5634:5634
+:total train data: (5634, 20)
+2026-05-25 18:35:47,864 - INFO - Test data size: 1409:1409
+:total test data: (1409, 20)
+2026-05-25 18:35:47,864 - INFO - === MISSING VALUE HANDLING ===
+2026-05-25 18:35:47,868 - INFO -  Before Handling Null values x_train columns names and shape:
+(5634, 20):Index(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'TotalCharges', 'sim'],
+      dtype='str'):gender               0
+SeniorCitizen        0
+Partner              0
+Dependents           0
+tenure               0
+PhoneService         0
+MultipleLines        0
+InternetService      0
+OnlineSecurity       0
+OnlineBackup         0
+DeviceProtection     0
+TechSupport          0
+StreamingTV          0
+StreamingMovies      0
+Contract             0
+PaperlessBilling     0
+PaymentMethod        0
+MonthlyCharges       0
+TotalCharges        11
+sim                  0
+dtype: int64
+2026-05-25 18:35:47,870 - INFO -  Before Handling Null values x_test columns names and shape:
+(1409, 20)
+:Index(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'TotalCharges', 'sim'],
+      dtype='str'):gender              0
+SeniorCitizen       0
+Partner             0
+Dependents          0
+tenure              0
+PhoneService        0
+MultipleLines       0
+InternetService     0
+OnlineSecurity      0
+OnlineBackup        0
+DeviceProtection    0
+TechSupport         0
+StreamingTV         0
+StreamingMovies     0
+Contract            0
+PaperlessBilling    0
+PaymentMethod       0
+MonthlyCharges      0
+TotalCharges        0
+sim                 0
+dtype: int64
+2026-05-25 18:35:47,887 - INFO - After Handling NUll values x_train Columns names and shape : (5634, 20) 
+ : Index(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'sim', 'TotalCharges_median'],
+      dtype='str') : gender                 0
+SeniorCitizen          0
+Partner                0
+Dependents             0
+tenure                 0
+PhoneService           0
+MultipleLines          0
+InternetService        0
+OnlineSecurity         0
+OnlineBackup           0
+DeviceProtection       0
+TechSupport            0
+StreamingTV            0
+StreamingMovies        0
+Contract               0
+PaperlessBilling       0
+PaymentMethod          0
+MonthlyCharges         0
+sim                    0
+TotalCharges_median    0
+dtype: int64
+2026-05-25 18:35:47,888 - INFO - After Handling NUll values x_test Columns names and shape : (1409, 20) 
+ : Index(['gender', 'SeniorCitizen', 'Partner', 'Dependents', 'tenure',
+       'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity',
+       'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV',
+       'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod',
+       'MonthlyCharges', 'sim', 'TotalCharges_median'],
+      dtype='str') : gender                 0
+SeniorCitizen          0
+Partner                0
+Dependents             0
+tenure                 0
+PhoneService           0
+MultipleLines          0
+InternetService        0
+OnlineSecurity         0
+OnlineBackup           0
+DeviceProtection       0
+TechSupport            0
+StreamingTV            0
+StreamingMovies        0
+Contract               0
+PaperlessBilling       0
+PaymentMethod          0
+MonthlyCharges         0
+sim                    0
+TotalCharges_median    0
+dtype: int64
+2026-05-25 18:35:47,889 - INFO - === DATA SEPARATION ===
+2026-05-25 18:35:47,889 - INFO - Numerical Columns (4): ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_median']
+2026-05-25 18:35:47,889 - INFO - Numerical Shape: (5634, 4)
+2026-05-25 18:35:47,890 - INFO - Categorical Columns (16): ['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod', 'sim']
+2026-05-25 18:35:47,890 - INFO - Categorical Shape: (5634, 16)
+2026-05-25 18:35:47,890 - INFO - ===  VARIABLE TRANSFORMATION ===
+2026-05-25 18:35:47,890 - INFO - Train rows BEFORE: (5634, 4) : 
+ : Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_median'], dtype='str')
+2026-05-25 18:35:47,890 - INFO - Test rows BEORE: (1409, 4): 
+ : Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_median'], dtype='str')
+2026-05-25 18:35:54,387 - INFO - Train rows AFTER : (5634, 4) : 
+ : Index(['SeniorCitizen', 'tenure_yeo', 'MonthlyCharges_qt',
+       'TotalCharges_median_qt'],
+      dtype='str')
+2026-05-25 18:35:54,387 - INFO - Test rows AFTER : (1409, 4) : 
+ : Index(['SeniorCitizen', 'tenure_yeo', 'MonthlyCharges_qt',
+       'TotalCharges_median_qt'],
+      dtype='str')
+2026-05-25 18:35:54,387 - INFO - === VARIABLE TRANSFORMATION COMPLETED ===
+2026-05-25 18:35:54,387 - INFO - ===  handling outliers ===
+2026-05-25 18:35:54,387 - INFO - Train rows BEFORE: (5634, 4) : 
+ : Index(['SeniorCitizen', 'tenure_yeo', 'MonthlyCharges_qt',
+       'TotalCharges_median_qt'],
+      dtype='str')
+2026-05-25 18:35:54,388 - INFO - Test rows BEORE: (1409, 4): 
+ : Index(['SeniorCitizen', 'tenure_yeo', 'MonthlyCharges_qt',
+       'TotalCharges_median_qt'],
+      dtype='str')
+2026-05-25 18:35:58,962 - INFO - Train rows AFTER : (5634, 4) : 
+ : Index(['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim',
+       'TotalCharges_median_qt_trim'],
+      dtype='str')
+2026-05-25 18:35:58,962 - INFO - Test rows AFTER : (1409, 4) : 
+ : Index(['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim',
+       'TotalCharges_median_qt_trim'],
+      dtype='str')
+2026-05-25 18:35:58,962 - INFO - === handling outliers COMPLETED ===
+2026-05-25 18:35:58,962 - INFO - === CATEGORICAL ENCODING ===
+2026-05-25 18:35:59,001 - INFO - Categorical encoding completed
+2026-05-25 18:35:59,001 - INFO - Encoded Categorical x_Train_cat Shape: (5634, 28):
+ : Index(['Partner', 'Dependents', 'Contract', 'PaperlessBilling', 'gender_Male',
+       'PhoneService_Yes', 'MultipleLines_No phone service',
+       'MultipleLines_Yes', 'InternetService_Fiber optic',
+       'InternetService_No', 'OnlineSecurity_No internet service',
+       'OnlineSecurity_Yes', 'OnlineBackup_No internet service',
+       'OnlineBackup_Yes', 'DeviceProtection_No internet service',
+       'DeviceProtection_Yes', 'TechSupport_No internet service',
+       'TechSupport_Yes', 'StreamingTV_No internet service', 'StreamingTV_Yes',
+       'StreamingMovies_No internet service', 'StreamingMovies_Yes',
+       'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check',
+       'sim_BSNL', 'sim_jio', 'sim_vodafone'],
+      dtype='str')
+2026-05-25 18:35:59,001 - INFO - Encoded Categorical x_Test_ cat Shape: (1409, 28):
+ : Index(['Partner', 'Dependents', 'Contract', 'PaperlessBilling', 'gender_Male',
+       'PhoneService_Yes', 'MultipleLines_No phone service',
+       'MultipleLines_Yes', 'InternetService_Fiber optic',
+       'InternetService_No', 'OnlineSecurity_No internet service',
+       'OnlineSecurity_Yes', 'OnlineBackup_No internet service',
+       'OnlineBackup_Yes', 'DeviceProtection_No internet service',
+       'DeviceProtection_Yes', 'TechSupport_No internet service',
+       'TechSupport_Yes', 'StreamingTV_No internet service', 'StreamingTV_Yes',
+       'StreamingMovies_No internet service', 'StreamingMovies_Yes',
+       'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check',
+       'sim_BSNL', 'sim_jio', 'sim_vodafone'],
+      dtype='str')
+2026-05-25 18:35:59,001 - INFO - === COMBINING DATA ===
+2026-05-25 18:35:59,002 - INFO - Final Train Shape: (5634, 32)
+2026-05-25 18:35:59,002 - INFO - Final Test Shape: (1409, 32)
+2026-05-25 18:35:59,002 - INFO - === FEATURE SELECTION STARTED ===
+2026-05-25 18:35:59,002 - INFO - X_train BEFORE FS: (5634, 32):
+ : Index(['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim',
+       'TotalCharges_median_qt_trim', 'Partner', 'Dependents', 'Contract',
+       'PaperlessBilling', 'gender_Male', 'PhoneService_Yes',
+       'MultipleLines_No phone service', 'MultipleLines_Yes',
+       'InternetService_Fiber optic', 'InternetService_No',
+       'OnlineSecurity_No internet service', 'OnlineSecurity_Yes',
+       'OnlineBackup_No internet service', 'OnlineBackup_Yes',
+       'DeviceProtection_No internet service', 'DeviceProtection_Yes',
+       'TechSupport_No internet service', 'TechSupport_Yes',
+       'StreamingTV_No internet service', 'StreamingTV_Yes',
+       'StreamingMovies_No internet service', 'StreamingMovies_Yes',
+       'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check',
+       'sim_BSNL', 'sim_jio', 'sim_vodafone'],
+      dtype='str')
+2026-05-25 18:35:59,002 - INFO - X_test BEFORE FS: (1409, 32):
+ : Index(['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim',
+       'TotalCharges_median_qt_trim', 'Partner', 'Dependents', 'Contract',
+       'PaperlessBilling', 'gender_Male', 'PhoneService_Yes',
+       'MultipleLines_No phone service', 'MultipleLines_Yes',
+       'InternetService_Fiber optic', 'InternetService_No',
+       'OnlineSecurity_No internet service', 'OnlineSecurity_Yes',
+       'OnlineBackup_No internet service', 'OnlineBackup_Yes',
+       'DeviceProtection_No internet service', 'DeviceProtection_Yes',
+       'TechSupport_No internet service', 'TechSupport_Yes',
+       'StreamingTV_No internet service', 'StreamingTV_Yes',
+       'StreamingMovies_No internet service', 'StreamingMovies_Yes',
+       'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check',
+       'sim_BSNL', 'sim_jio', 'sim_vodafone'],
+      dtype='str')
+2026-05-25 18:35:59,249 - INFO - x_train AFTER FS: (5634, 21):
+ : Index(['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim', 'Partner',
+       'Dependents', 'Contract', 'PaperlessBilling', 'gender_Male',
+       'PhoneService_Yes', 'MultipleLines_Yes', 'InternetService_Fiber optic',
+       'InternetService_No', 'OnlineSecurity_Yes', 'OnlineBackup_Yes',
+       'DeviceProtection_Yes', 'TechSupport_Yes', 'StreamingTV_Yes',
+       'StreamingMovies_Yes', 'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check'],
+      dtype='str')
+2026-05-25 18:35:59,249 - INFO - x_test AFTER FS: (1409, 21):
+ : Index(['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim', 'Partner',
+       'Dependents', 'Contract', 'PaperlessBilling', 'gender_Male',
+       'PhoneService_Yes', 'MultipleLines_Yes', 'InternetService_Fiber optic',
+       'InternetService_No', 'OnlineSecurity_Yes', 'OnlineBackup_Yes',
+       'DeviceProtection_Yes', 'TechSupport_Yes', 'StreamingTV_Yes',
+       'StreamingMovies_Yes', 'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check'],
+      dtype='str')
+2026-05-25 18:35:59,249 - INFO - === FEATURE SELECTION COMPLETED ===
+2026-05-25 18:35:59,249 - INFO - _________Before Balancing__________
+2026-05-25 18:35:59,249 - INFO - Good (1) count BEFORE: 1516
+2026-05-25 18:35:59,249 - INFO - Bad (0) count BEFORE: 4118
+2026-05-25 18:35:59,249 - INFO - X_train shape BEFORE: (5634, 21)
+2026-05-25 18:35:59,249 - INFO - y_train shape BEFORE: (5634,)
+2026-05-25 18:35:59,249 - INFO - ---------------Applying SMOTE-------------------------
+2026-05-25 18:36:00,731 - INFO - ---------------After Balancing-------------------------
+2026-05-25 18:36:00,732 - INFO - Good (1) count AFTER: 4118
+2026-05-25 18:36:00,732 - INFO - Bad (0) count AFTER: 4118
+2026-05-25 18:36:00,732 - INFO - X_train shape AFTER: (8236, 21)
+2026-05-25 18:36:00,732 - INFO - y_train shape AFTER: (8236,)
+2026-05-25 18:36:00,732 - INFO - === FEATURE SCALING STARTED ===
+2026-05-25 18:36:00,732 - INFO - x_train BEFORE scaling shape: (8236, 21)
+2026-05-25 18:36:00,732 - INFO - x_test BEFORE scaling shape: (1409, 21)
+2026-05-25 18:36:05,386 - INFO - x_train AFTER scaling shape: (8236, 21)
+2026-05-25 18:36:05,386 - INFO - x_test AFTER scaling shape: (1409, 21)
+2026-05-25 18:36:05,386 - INFO - === FEATURE SCALING COMPLETED ===

@@ -1,0 +1,92 @@
+2026-05-25 18:35:47,870 - INFO - Before Handling Null values x_train shape: (5634, 20)
+2026-05-25 18:35:47,873 - INFO - x_train Missing:
+gender               0
+SeniorCitizen        0
+Partner              0
+Dependents           0
+tenure               0
+PhoneService         0
+MultipleLines        0
+InternetService      0
+OnlineSecurity       0
+OnlineBackup         0
+DeviceProtection     0
+TechSupport          0
+StreamingTV          0
+StreamingMovies      0
+Contract             0
+PaperlessBilling     0
+PaymentMethod        0
+MonthlyCharges       0
+TotalCharges        11
+sim                  0
+dtype: int64
+2026-05-25 18:35:47,874 - INFO - Before Handling Null values x_test shape: (1409, 20)
+2026-05-25 18:35:47,876 - INFO - x_test Missing:
+gender              0
+SeniorCitizen       0
+Partner             0
+Dependents          0
+tenure              0
+PhoneService        0
+MultipleLines       0
+InternetService     0
+OnlineSecurity      0
+OnlineBackup        0
+DeviceProtection    0
+TechSupport         0
+StreamingTV         0
+StreamingMovies     0
+Contract            0
+PaperlessBilling    0
+PaymentMethod       0
+MonthlyCharges      0
+TotalCharges        0
+sim                 0
+dtype: int64
+2026-05-25 18:35:47,879 - INFO - After Handling Null values x_train shape: (5634, 20)
+2026-05-25 18:35:47,883 - INFO - x_train Missing:
+gender                 0
+SeniorCitizen          0
+Partner                0
+Dependents             0
+tenure                 0
+PhoneService           0
+MultipleLines          0
+InternetService        0
+OnlineSecurity         0
+OnlineBackup           0
+DeviceProtection       0
+TechSupport            0
+StreamingTV            0
+StreamingMovies        0
+Contract               0
+PaperlessBilling       0
+PaymentMethod          0
+MonthlyCharges         0
+sim                    0
+TotalCharges_median    0
+dtype: int64
+2026-05-25 18:35:47,883 - INFO - After Handling Null values x_test shape: (1409, 20)
+2026-05-25 18:35:47,884 - INFO - x_test Missing:
+gender                 0
+SeniorCitizen          0
+Partner                0
+Dependents             0
+tenure                 0
+PhoneService           0
+MultipleLines          0
+InternetService        0
+OnlineSecurity         0
+OnlineBackup           0
+DeviceProtection       0
+TechSupport            0
+StreamingTV            0
+StreamingMovies        0
+Contract               0
+PaperlessBilling       0
+PaymentMethod          0
+MonthlyCharges         0
+sim                    0
+TotalCharges_median    0
+dtype: int64

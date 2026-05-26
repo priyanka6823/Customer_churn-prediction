@@ -1,0 +1,24 @@
+2026-05-25 18:35:47,890 - INFO - === VARIABLE TRANSFORMATION STARTED ===
+2026-05-25 18:35:47,890 - INFO - === VARIABLE TRANSFORMATION STARTED ===
+2026-05-25 18:35:47,890 - INFO - Before Train Column Name : (5634, 4) and columns: Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_median'], dtype='str')
+2026-05-25 18:35:47,890 - INFO - Before Test Column Name : (1409, 4) and columns: Index(['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges_median'], dtype='str')
+2026-05-25 18:35:54,386 - INFO - After Train Column Name : (5634, 4) and columns: Index(['SeniorCitizen', 'tenure_yeo', 'MonthlyCharges_qt',
+       'TotalCharges_median_qt'],
+      dtype='str')
+2026-05-25 18:35:54,386 - INFO - After Test Column Name : (1409, 4) and columns: Index(['SeniorCitizen', 'tenure_yeo', 'MonthlyCharges_qt',
+       'TotalCharges_median_qt'],
+      dtype='str')
+2026-05-25 18:35:54,388 - INFO - === handling outliers STARTED ===
+2026-05-25 18:35:54,388 - INFO - Before Train Column Name : Index(['SeniorCitizen', 'tenure_yeo', 'MonthlyCharges_qt',
+       'TotalCharges_median_qt'],
+      dtype='str')
+2026-05-25 18:35:54,388 - INFO - Before Test Column Name : Index(['SeniorCitizen', 'tenure_yeo', 'MonthlyCharges_qt',
+       'TotalCharges_median_qt'],
+      dtype='str')
+2026-05-25 18:35:58,961 - INFO - After Train Columns: Index(['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim',
+       'TotalCharges_median_qt_trim'],
+      dtype='str')
+2026-05-25 18:35:58,962 - INFO - After Test Columns: Index(['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim',
+       'TotalCharges_median_qt_trim'],
+      dtype='str')
+2026-05-25 18:35:58,962 - INFO - === handling outliers completed ===

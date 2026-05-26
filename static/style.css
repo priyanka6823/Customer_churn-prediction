@@ -1,0 +1,82 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+}
+
+.card {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* LEFT */
+.left {
+    width: 20%;
+    background: linear-gradient(180deg, #ff9a9e, #fad0c4);
+    padding: 20px;
+    color: white;
+}
+
+.left h2 {
+    text-align: center;
+}
+
+.left label {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* RIGHT */
+.right {
+    width: 80%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.right h2 {
+    grid-column: span 2;
+}
+
+input, select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    grid-column: span 2;
+    padding: 12px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+}

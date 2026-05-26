@@ -1,0 +1,38 @@
+2026-05-25 18:36:00,732 - INFO - === FEATURE SCALING STARTED ===
+2026-05-25 18:36:00,732 - INFO - x_train shape: (8236, 21), columns: ['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim', 'Partner', 'Dependents', 'Contract', 'PaperlessBilling', 'gender_Male', 'PhoneService_Yes', 'MultipleLines_Yes', 'InternetService_Fiber optic', 'InternetService_No', 'OnlineSecurity_Yes', 'OnlineBackup_Yes', 'DeviceProtection_Yes', 'TechSupport_Yes', 'StreamingTV_Yes', 'StreamingMovies_Yes', 'PaymentMethod_Credit card (automatic)', 'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check']
+2026-05-25 18:36:00,732 - INFO - x_test shape: (1409, 21), columns: ['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim', 'Partner', 'Dependents', 'Contract', 'PaperlessBilling', 'gender_Male', 'PhoneService_Yes', 'MultipleLines_Yes', 'InternetService_Fiber optic', 'InternetService_No', 'OnlineSecurity_Yes', 'OnlineBackup_Yes', 'DeviceProtection_Yes', 'TechSupport_Yes', 'StreamingTV_Yes', 'StreamingMovies_Yes', 'PaymentMethod_Credit card (automatic)', 'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check']
+2026-05-25 18:36:00,738 - INFO - x_train AFTER scaling shape and columns: (8236, 21):
+ : Index(['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim', 'Partner',
+       'Dependents', 'Contract', 'PaperlessBilling', 'gender_Male',
+       'PhoneService_Yes', 'MultipleLines_Yes', 'InternetService_Fiber optic',
+       'InternetService_No', 'OnlineSecurity_Yes', 'OnlineBackup_Yes',
+       'DeviceProtection_Yes', 'TechSupport_Yes', 'StreamingTV_Yes',
+       'StreamingMovies_Yes', 'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check'],
+      dtype='str')
+2026-05-25 18:36:00,738 - INFO - x_test AFTER scaling shape: (1409, 21):
+ : Index(['SeniorCitizen', 'tenure_yeo_trim', 'MonthlyCharges_qt_trim', 'Partner',
+       'Dependents', 'Contract', 'PaperlessBilling', 'gender_Male',
+       'PhoneService_Yes', 'MultipleLines_Yes', 'InternetService_Fiber optic',
+       'InternetService_No', 'OnlineSecurity_Yes', 'OnlineBackup_Yes',
+       'DeviceProtection_Yes', 'TechSupport_Yes', 'StreamingTV_Yes',
+       'StreamingMovies_Yes', 'PaymentMethod_Credit card (automatic)',
+       'PaymentMethod_Electronic check', 'PaymentMethod_Mailed check'],
+      dtype='str')
+2026-05-25 18:36:00,739 - INFO - Scaler saved as models/scaler.pkl
+2026-05-25 18:36:00,739 - INFO - =========== TRAINING ALL MODELS ===========
+2026-05-25 18:36:05,379 - INFO - Test Accuracy: 0.7608232789212207
+2026-05-25 18:36:05,380 - INFO - Confusion Matrix:
+[[797 259]
+ [ 78 275]]
+2026-05-25 18:36:05,386 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.91      0.75      0.83      1056
+           1       0.51      0.78      0.62       353
+
+    accuracy                           0.76      1409
+   macro avg       0.71      0.77      0.72      1409
+weighted avg       0.81      0.76      0.77      1409
+
+2026-05-25 18:36:05,386 - INFO - === FEATURE SCALING COMPLETED ===
